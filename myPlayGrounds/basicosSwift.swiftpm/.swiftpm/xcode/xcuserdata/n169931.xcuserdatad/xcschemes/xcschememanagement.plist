@@ -4,17 +4,8 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Genericos (Playground).xcscheme</key>
+		<key>basicosSwift.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>basicosSwift (Playground).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
