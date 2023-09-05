@@ -2,22 +2,42 @@ Esto es un pequeño resumen de todas las propiedades de entorno que podemos
 encontrar actualmente en SwiftUI:
 
 - @AppStorage:  Se usa para la persistencia de información, este property wrapper usa por debajo UserDefaults para almacenar información en una base de datos.
+
 	Se puede guardar la información para poder cerrar la app y recuperar los datos.
 
-- @Binding: 
-- @Enviroment:
-- @EnviromentObject:
-- @FetchRequest:
-- @FocusBinding:
-- @GestureStarte:
+- @Binding: La pantalla puede contener múltiples vistas y la mutación de un estado se puede delegar a otra vista totalmente diferente.
+
+	Si en esta vista se espera algún dato, este será @Binding. Se debe usar @Binding cuando te llegue de otra vista una propiedad y tengas que mutarla.
+
+- @EnviromentObject:  Proporciona desde alguna vista padre una clase que podrá ser usada en toda su jerarquía de vistas. Es muy sencillo, es decir, metemos en el environment una clase instanciada y esta clase podrá ser usada en todas sus subvistas.
+
+- @ObservableOpbject: Se crea una clase a parte con diferentes propiedades o métodos, que podremos usar en nuestras vistas y cuando cambian la vista se vuelve a dibujar. Se puede reutilizar la clase en diferentes vistas.
+
+	Hay que inicializarla y gestionarla.
+
+- @StateObject: Si la vista se crea de nuevo, los datos guardados no se pierden, el resto funciona como @ObservableObject.
+
+- @Published: Parecido a @State, pero en lugar de usarse en un struct se usa en una clase. Cualquier cambio que se realice en esa propiedad se podrá controlar en las vistas donde haya una instancia de ella.
+
+	Se puede rehusar la instancia en varias vistas.
+
+- @SceneStorage: Guarda el estado de las pantallas, por debajo no usa UserDefaults, cada Scene tiene su propio Storage.
+
+	Por ejemplo, si estás rellenando un formulario y cierras la app, si no se hace @SceneStorage, el formulario este no se guardaría por lo que habría que completarlo entero de nuevo, con esta property wrapper el estados del formulario se guardaría.
+
+- @State: Persistencia de datos en memoria, es una variable que se guarda en memoria y perdura en el tiempo que dure la aplicación con vida. 
+
+	Las vistas en SwiftUI son un struct y usamos el @State para poder modificar sus propiedades, cuando el valor de esta propiedad cambia, se regenera la vista por completo.
+
+
+- @FetchRequest: Recibiendo un NSFetchRequest, se encarga de mantener sincronizada  la vista con los datos que arroja dicha petición a base de datos.
+
+- @FocusedBinding: Si hay varios publicadores que usan la misma key, este identificará el más cercano al foco.
+
+- @GestureState: Es un property wrapper que actualiza una propiedad mientras el usuario realiza algun gesto y devuelve la propiedad a su estado inicial cuando el gesto termina.
+
+- @NSApplicationDelegateAdaptor: Property wrapper que usas para crear  un delegado de AppKit, AppKit contiene los objetos necesarios para construir una interfaz para una aplicación.
+
 - @Namespace:
-- @NSApplicationDelegateAdaptor:
-- @ObservedOpbject:
-- @Published:
 - @ScaledMetric:
-- @SceneStorage:
-
-- @State: Persistencia de datos en memoria, es una variable que se guarda en memoria y perdura en el tiempo que dure la aplicación con vida.
-
-- @StateObject:
 - @UIApplicationDelegateAdaptor:
