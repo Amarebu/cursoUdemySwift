@@ -1,0 +1,23 @@
+Esto es un pequeño resumen de todas las propiedades de entorno que podemos 
+encontrar actualmente en SwiftUI:
+
+- @AppStorage:  Se usa para la persistencia de información, este property wrapper usa por debajo UserDefaults para almacenar información en una base de datos.
+	Se puede guardar la información para poder cerrar la app y recuperar los datos.
+
+- @Binding: 
+- @Enviroment:
+- @EnviromentObject:
+- @FetchRequest:
+- @FocusBinding:
+- @GestureStarte:
+- @Namespace:
+- @NSApplicationDelegateAdaptor:
+- @ObservedOpbject:
+- @Published:
+- @ScaledMetric:
+- @SceneStorage:
+
+- @State: Persistencia de datos en memoria, es una variable que se guarda en memoria y perdura en el tiempo que dure la aplicación con vida.
+
+- @StateObject:
+- @UIApplicationDelegateAdaptor:
