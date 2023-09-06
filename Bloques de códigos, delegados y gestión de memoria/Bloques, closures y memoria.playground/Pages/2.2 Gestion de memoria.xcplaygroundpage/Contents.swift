@@ -26,5 +26,22 @@ class BirdWatcher {
     }
 }
 
+class BirdsCounter {
+    var birdsCount = 0
+    let birdsDetector: BirdWatcher
+    
+    init(birdsDetector: BirdWatcher) {
+        self.birdsDetector = birdsDetector
+        
+        self.birdsDetector.startScanningArea() // Activamos el scaneo
+        self.birdsDetector.setNotificationAction {
+            self.birdsCount += 1
+        }
+    }
+    
+    func printReport() {
+        print("Aves detectadas: \(birdsCount)")
+    }
+}
 
 //: [Next](@next)
