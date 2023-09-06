@@ -3,5 +3,8 @@
     <pages>
         <page name='1.1 Bloques de código'/>
         <page name='1.2 Delegados'/>
+        <page name='1.3 Notification Center'/>
+        <page name='2.1 Gestión de memoria'/>
+        <page name='2.2 Gestion de memoria'/>
     </pages>
 </playground>
