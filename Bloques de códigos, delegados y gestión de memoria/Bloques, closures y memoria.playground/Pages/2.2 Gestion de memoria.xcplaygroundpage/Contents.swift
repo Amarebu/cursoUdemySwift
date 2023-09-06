@@ -26,6 +26,10 @@ class BirdWatcher {
     }
 }
 
+/*
+ BirdsWatcher tiene una referencia a BirdsCounter porque su delegdo es el que lo retiene
+ Además BirdCounter tiene una referencia al BirdWatcher 
+ */
 class BirdsCounter {
     var birdsCount = 0
     let birdsDetector: BirdWatcher
@@ -35,7 +39,7 @@ class BirdsCounter {
         
         self.birdsDetector.startScanningArea() // Activamos el scaneo
         self.birdsDetector.setNotificationAction {
-            self.birdsCount += 1
+            self.birdsCount += 1        // Aquí aumenta la referencia a 1
         }
     }
     
@@ -44,4 +48,6 @@ class BirdsCounter {
     }
 }
 
+var detector = BirdWatcher()
+var counter = BirdsCounter(birdsDetector: detector) // Línea de referencia 2
 //: [Next](@next)
