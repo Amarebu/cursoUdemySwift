@@ -116,4 +116,6 @@ statistics.statisticalPush(-2)
 print("Media: \((statistics.averageValue()))")
 statistics.statisticalPop()
 print("Media: \((statistics.averageValue()))")
+
+
 //: [Next](@next)
