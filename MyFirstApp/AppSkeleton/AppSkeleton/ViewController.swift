@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // super representa a la clase padre
         print("La vista se ha cargado")
+        guard let view = self.view else {
+            return
+        }
+        view.backgroundColor = UIColor.blue
     }
     
     override func viewWillAppear(_ animated: Bool) {
