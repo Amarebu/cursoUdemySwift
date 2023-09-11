@@ -25,19 +25,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate { // Aqui tenemos el res
         window.makeKeyAndVisible()
     }
 
-    func sceneDidDisconnect(_ scene: UIScene) {
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        // Justo antes de entrar en el estado Foreground
+        // Cualquer cosa que esté fuera de los storyBoards, hay que hacerlo en este punto
+        print("La escena va a pasar a primer plano")
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
+        print("La escena empezó a ser la escena activa")
     }
-
+    
     func sceneWillResignActive(_ scene: UIScene) {
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
+        print("La escena va a dejar de ser la escena activa")
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+        print(" La escena ha entrado en segundo plano, y la escena ya no es visible")
+    }
+    
+    func sceneDidDisconnect(_ scene: UIScene) {
+        print("La escena se va a desconectar")
     }
 
 
